@@ -41,7 +41,11 @@ public class PlayerScript : MonoBehaviour
 		if (h > 0) {
 			
 			if (vel < maxVelocity) {
-				forceX = moveForce;
+				if (grounded) {
+					forceX = moveForce;
+				} else {
+					forceX = moveForce * 1.1f;
+				}
 			}
 
 			Vector3 scale = transform.localScale;
@@ -52,7 +56,11 @@ public class PlayerScript : MonoBehaviour
 		} else if (h < 0) {
 			
 			if (vel < maxVelocity) {
-				forceX = -moveForce;
+				if (grounded) {
+					forceX = -moveForce;
+				} else {
+					forceX = -moveForce * 1.1f;
+				}
 			}
 
 			Vector3 scale = transform.localScale;
@@ -64,6 +72,20 @@ public class PlayerScript : MonoBehaviour
 			anim.SetBool ("Walk", false);
 		}
 
+		if (Input.GetKey (KeyCode.Space)) {
+			if (grounded) {
+				grounded = false;
+				forceY = jumpForce;
+			}
+		}
+
 		myBody.AddForce (new Vector2 (forceX, forceY));
+	}
+
+	void OnCollisionEnter2D (Collision2D target)
+	{
+		if (target.gameObject.tag == "Ground") {
+			grounded = true;
+		}
 	}
 }

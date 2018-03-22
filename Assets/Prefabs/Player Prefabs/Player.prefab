@@ -56,9 +56,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.25
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -72,7 +72,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1784792658280940}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4c95294464f924ff496264cc287be1fb, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -117,6 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ce213b080c242f795e94471f89291d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveForce: 20
+  jumpForce: 700
+  maxVelocity: 4
 --- !u!212 &212063001674473076
 SpriteRenderer:
   m_ObjectHideFlags: 1
