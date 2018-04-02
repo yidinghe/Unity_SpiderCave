@@ -28,6 +28,7 @@ public class SpiderShooter : MonoBehaviour
 	{	
 		if (target.tag == "Player") {
 			Destroy (target.gameObject);
+			GameObject.Find ("GamePlay Controller").GetComponent<GamePlayController> ().PlayerDied ();
 		}
 
 	}

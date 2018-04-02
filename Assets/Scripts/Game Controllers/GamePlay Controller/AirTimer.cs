@@ -28,6 +28,7 @@ public class AirTimer : MonoBehaviour {
 			air -= airBurn * Time.deltaTime;
 			slider.value = air;
 		} else {
+			GetComponent<GamePlayController> ().PlayerDied ();
 			Destroy (player);
 		}
 	}

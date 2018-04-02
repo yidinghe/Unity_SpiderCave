@@ -30,6 +30,7 @@ public class LevelTimer : MonoBehaviour
 			time -= timeBurn * Time.deltaTime;
 			slider.value = time;
 		} else {
+			GetComponent<GamePlayController> ().PlayerDied ();
 			Destroy (player);
 		}
 	}

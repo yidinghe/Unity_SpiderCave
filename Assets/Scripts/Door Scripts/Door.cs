@@ -45,7 +45,7 @@ public class Door : MonoBehaviour
 	void OnTriggerEnter2D (Collider2D target)
 	{
 		if (target.tag == "Player") {
-			Debug.Log ("Game Finished");
+			GameObject.Find ("GamePlay Controller").GetComponent<GamePlayController> ().GoToSelectLevel ();
 		}
 	}
 

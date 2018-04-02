@@ -10,6 +10,7 @@ public class SpiderBullet : MonoBehaviour
 		if (target.tag == "Player") {
 			Destroy (target.gameObject);
 			Destroy (gameObject);
+			GameObject.Find ("GamePlay Controller").GetComponent<GamePlayController> ().PlayerDied ();
 		}
 
 		if (target.tag == "Ground") {
