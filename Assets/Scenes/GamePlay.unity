@@ -11993,7 +11993,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1317943929729244, guid: c46cf691d17494019bd0a029c9c1610b, type: 2}
       propertyPath: m_Name
-      value: Time (1)
+      value: Time
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c46cf691d17494019bd0a029c9c1610b, type: 2}

@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		//PlayerWalkKeyboard ();
+		PlayerWalkKeyboard ();
 		PlayerWalkJoystick ();
 	}
 
